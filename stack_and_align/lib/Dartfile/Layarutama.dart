@@ -1,4 +1,7 @@
+// ignore_for_file: file_names
+
 import 'package:belajar_flutter/Dartfile/TabBarview.dart';
+import 'package:belajar_flutter/Dartfile/qrscancode.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'Container.dart';
@@ -8,6 +11,7 @@ import 'Textfield.dart';
 import 'StackAlign.dart';
 import 'Kartu.dart';
 import 'Inkwells.dart';
+import 'Musicplayer.dart';
 
 List<Color> colors = [
   Colors.yellow,
@@ -19,6 +23,7 @@ List<Color> colors = [
   Colors.indigo,
   Colors.blue,
   Colors.green,
+  const Color.fromARGB(255, 208, 255, 0),
 ];
 
 class ButtonItemData {
@@ -89,6 +94,20 @@ class LayarUtama extends StatelessWidget {
         onPressed: (BuildContext context) {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const Tabbarview()));
+        }),
+    ButtonItemData(
+        name: "Music Player\n    (gagal)",
+        color: colors[9],
+        onPressed: (BuildContext context) {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const Musicplayer()));
+        }),
+    ButtonItemData(
+        name: "Qr Code",
+        color: colors[0],
+        onPressed: (BuildContext context) {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const Qrscann()));
         }),
   ];
 
