@@ -121,7 +121,7 @@ class _MyMqttState extends State<MyMqtt> {
             onPressed: () {
               final message = messageController.text;
               if (message.isNotEmpty) {
-                mqttHandler.publishMessage(message);
+                mqttHandler.publishMessage('erilsanjaya/test', message);
               }
             },
           ),

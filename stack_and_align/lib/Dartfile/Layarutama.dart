@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 
+import 'package:belajar_flutter/Dartfile/Mqtt/mqtt.dart';
 import 'package:belajar_flutter/Dartfile/TabBarview.dart';
 import 'package:belajar_flutter/Dartfile/qrscancode.dart';
 import 'package:flutter/gestures.dart';
@@ -109,6 +110,13 @@ class LayarUtama extends StatelessWidget {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const Qrscann()));
         }),
+    ButtonItemData(
+        name: "        Mqtt\n(Under Develop)",
+        color: colors[1],
+        onPressed: (BuildContext context) {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => const MyMqtt()));
+        }),
   ];
 
   @override
@@ -173,7 +181,7 @@ class LayarUtama extends StatelessWidget {
                 },
               ),
               Center(
-                  child: Text("Under Developing",
+                  child: Text("Under Develop by Eril.",
                       style: TextStyle(
                         fontSize: data2.length.toDouble() + 20,
                         color: Colors.red.shade200,

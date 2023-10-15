@@ -112,8 +112,8 @@ class MqttHandler with ChangeNotifier {
     log('MQTT_LOGS:: Ping response client callback invoked');
   }
 
-  void publishMessage(String message) {
-    const pubTopic = 'erilsanjaya/test';
+  void publishMessage(String topic, String message) {
+    final pubTopic = topic;
     final builder = MqttClientPayloadBuilder();
     builder.addString(message);
 

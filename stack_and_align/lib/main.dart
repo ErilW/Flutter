@@ -1,4 +1,3 @@
-import 'package:belajar_flutter/Dartfile/Mqtt/mqtt.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'Dartfile/layarutama.dart';
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: true,
-      home: const MyMqtt(),
+      home: const SandiPage(),
     );
   }
 }
