@@ -26,10 +26,10 @@ class MqttHandler with ChangeNotifier {
   final ValueNotifier<String> data = ValueNotifier<String>("");
   late MqttServerClient client;
 
-  Future<Object> connect() async {
-    final id = idController.text;
-    final broker = brokerController.text;
-    final port = int.parse(portController.text);
+  Future<Object> connect() async { 
+    var id = idController.text;
+    var broker = brokerController.text;
+    var port = int.parse(portController.text);
 
     client = MqttServerClient.withPort(broker, id, port);
 
